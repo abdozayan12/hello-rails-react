@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
   root 'root#index'
-  get 'greetings/random', to: 'greetings#random'
+  
+  namespace :api do
+    namespace :v1 do
+      get 'random_greeting', to: 'greetings#index'
+    end
+  end
 end
