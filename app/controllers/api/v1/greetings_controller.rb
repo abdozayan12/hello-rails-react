@@ -5,7 +5,7 @@ class Api::V1::GreetingsController < ApplicationController
     if @random_greeting
       render json: { greeting: @random_greeting.message }
     else
-      render json: { greeting: "No greetings found" }
+      render json: { greeting: 'No greetings found' }
     end
   end
 end
